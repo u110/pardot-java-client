@@ -18,6 +18,7 @@
 package com.darksci.pardot.api.request.visitoractivity;
 
 import com.darksci.pardot.api.request.BaseQueryRequest;
+import com.darksci.pardot.api.request.DateParameter;
 import com.darksci.pardot.api.response.visitoractivity.VisitorActivityType;
 
 import java.util.Collection;
@@ -68,10 +69,7 @@ public class VisitorActivityQueryRequest extends BaseQueryRequest<VisitorActivit
      * @return RequestBuilder
      */
     public VisitorActivityQueryRequest withActivityTypeIds(final Collection<Integer> activityTypes) {
-        for (final Integer activityType: activityTypes) {
-            return withCollectionParam("type", activityType);
-        }
-        return this;
+        return withCollectionParams("type", activityTypes);
     }
 
     // activity type filters
@@ -336,5 +334,23 @@ public class VisitorActivityQueryRequest extends BaseQueryRequest<VisitorActivit
      */
     public VisitorActivityQueryRequest withSortById() {
         return super.withSortById();
+    }
+
+    /**
+     * Add constraint where UpdatedAt field is before than the specified time value.
+     * @param updatedBefore date constraint.
+     * @return VisitorActivityQueryRequest
+     */
+    public VisitorActivityQueryRequest withUpdatedBefore(final DateParameter updatedBefore) {
+        return super.withUpdatedBefore(updatedBefore);
+    }
+
+    /**
+     * Add constraint where UpdatedAt field is before than the specified time value.
+     * @param updatedAfter date constraint.
+     * @return VisitorActivityQueryRequest
+     */
+    public VisitorActivityQueryRequest withUpdatedAfter(final DateParameter updatedAfter) {
+        return super.withUpdatedAfter(updatedAfter);
     }
 }

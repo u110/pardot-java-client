@@ -115,6 +115,10 @@ public class Prospect {
     @JacksonXmlProperty(localName = "is_starred")
     private Boolean isStarred;
 
+    @JsonDeserialize(using = PardotBooleanSerializer.class)
+    @JacksonXmlProperty(localName = "is_archived")
+    private Boolean isArchived;
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -313,6 +317,10 @@ public class Prospect {
 
     public Boolean getIsStarred() {
         return isStarred;
+    }
+
+    public Boolean getIsArchived() {
+        return isArchived;
     }
 
     public LocalDateTime getCreatedAt() {
