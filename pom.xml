@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.darksci</groupId>
+    <groupId>io.github.u110</groupId>
     <artifactId>pardot-api-client</artifactId>
-    <version>3.2.0-0.0.8</version>
+    <version>3.2.0-0.0.9</version>
     <packaging>jar</packaging>
 
     <!-- Require Maven 3.5.0 -->
