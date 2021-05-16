@@ -52,6 +52,8 @@ public class VisitorActivity {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime updatedAt;
 
     public Long getId() {
         return id;
@@ -133,6 +135,10 @@ public class VisitorActivity {
         return createdAt;
     }
 
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
     @Override
     public String toString() {
         return "VisitorActivity{"
@@ -156,6 +162,7 @@ public class VisitorActivity {
             + ", visitorPageViewId=" + visitorPageViewId
             + ", campaign=" + campaign
             + ", createdAt=" + createdAt
+            + ", updatedAt=" + updatedAt
             + '}';
     }
 }
