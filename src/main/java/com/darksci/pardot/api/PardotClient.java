@@ -262,7 +262,7 @@ public class PardotClient implements AutoCloseable {
 
         // Don't log out responses from Login requests to avoid leaking sensitive details.
         if (!(request instanceof LoginRequestMarker)) {
-            logger.info("Response: {}", restResponse);
+            logger.debug("Response: {}", restResponse);
         }
 
         // Check for invalid http status codes

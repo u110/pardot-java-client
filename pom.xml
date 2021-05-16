@@ -6,7 +6,7 @@
 
     <groupId>io.github.u110</groupId>
     <artifactId>pardot-api-client</artifactId>
-    <version>3.2.0-0.0.9</version>
+    <version>3.2.0-0.0.10</version>
     <packaging>jar</packaging>
 
     <!-- Require Maven 3.5.0 -->
